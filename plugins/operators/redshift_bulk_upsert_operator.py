@@ -1,5 +1,5 @@
 from airflow.providers.postgres.hooks.postgres import PostgresHook
-from Integration.plugins.hooks.flipt_s3_hook import FliptS3Hook
+from plugins.hooks.flipt_s3_hook import FliptS3Hook
 from airflow.models.baseoperator import BaseOperator
 from airflow.models import Variable
 from json import loads
