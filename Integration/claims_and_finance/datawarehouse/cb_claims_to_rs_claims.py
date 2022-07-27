@@ -2,15 +2,15 @@ import datetime
 import logging as log
 from airflow import DAG, XComArg
 from airflow.decorators import task
-from dags.Integration.plugins.config.default_dict_args import default_dag_args, default_task_args
-from dags.plugins.hooks.couchbase_hook import CouchbaseHook
-from dags.Integration.plugins.helpers import from_date, get_last_successful_dagrun_date_task
-from dags.plugins.operators.couchbase_operator import CouchbaseOperator
+from Integration.plugins.config.default_dict_args import default_dag_args, default_task_args
+from plugins.hooks.couchbase_hook import CouchbaseHook
+from Integration.plugins.helpers import from_date, get_last_successful_dagrun_date_task
+from plugins.operators.couchbase_operator import CouchbaseOperator
 from airflow.providers.postgres.operators.postgres import PostgresOperator
-from dags.Integration.plugins.dag_helpers.cb_claims_to_dw_claims.dw_processed_claim_sql import insert_processed_claims_sql
-from dags.plugins.operators.redshift_bulk_upsert_operator import RedshiftBulkUpsertOperator
-from dags.Integration.plugins.utils.s3_url import s3_source_error_url, s3_task_url, s3_source_url
-from dags.plugins.operators.postgres_list_operator import PostgresListOperator, PostgresHook
+from Integration.plugins.dag_helpers.cb_claims_to_dw_claims.dw_processed_claim_sql import insert_processed_claims_sql
+from plugins.operators.redshift_bulk_upsert_operator import RedshiftBulkUpsertOperator
+from Integration.plugins.utils.s3_url import s3_source_error_url, s3_task_url, s3_source_url
+from plugins.operators.postgres_list_operator import PostgresListOperator, PostgresHook
 
 bucket = "`{bucket}`"
 validation_query_list = """

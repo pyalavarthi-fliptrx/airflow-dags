@@ -1,5 +1,5 @@
-from dags.Integration.plugins.hooks.flipt_s3_hook import FliptS3Hook
-from dags.Integration.plugins.utils.dump_json import dump_json
+from Integration.plugins.hooks.flipt_s3_hook import FliptS3Hook
+from Integration.plugins.utils.dump_json import dump_json
 import json
 from typing import Generator
 

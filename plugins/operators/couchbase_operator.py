@@ -1,7 +1,7 @@
 from airflow.models.baseoperator import BaseOperator
 from airflow.hooks.S3_hook import S3Hook
 from airflow.utils.decorators import apply_defaults
-from dags.Integration.plugins.hooks.couchbase_hook import CouchbaseHook
+from Integration.plugins.hooks.couchbase_hook import CouchbaseHook
 from tempfile import NamedTemporaryFile
 import logging as log
 import json
